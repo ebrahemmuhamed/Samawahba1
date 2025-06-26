@@ -1,17 +1,17 @@
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $data = "اسم: " . $_POST["name"] . "\n";
-  $data .= "رقم: " . $_POST["phone"] . "\n";
-  $data .= "العنوان: " . $_POST["address"] . "\n";
-  $data .= "الرحلة: " . $_POST["trip_type"] . "\n";
-  $data .= "تذاكر طيران: " . $_POST["flight"] . "\n";
-  $data .= "ملاحظات: " . $_POST["notes"] . "\n";
-  $data .= "--------------------------\n";
+    $name = $_POST["name"];
+    $phone = $_POST["phone"];
+    $address = $_POST["address"];
+    $trip_type = $_POST["trip_type"];
+    $flight = $_POST["flight"];
+    $notes = $_POST["notes"];
 
-  file_put_contents("submissions.txt", $data, FILE_APPEND);
-  echo "تم تسجيل البيانات بنجاح!";
+    $data = "الاسم: $name\nرقم الهاتف: $phone\nالعنوان: $address\nنوع الرحلة: $trip_type\nتذاكر طيران: $flight\nملاحظات: $notes\n---\n";
+    file_put_contents("submissions.txt", $data, FILE_APPEND);
+    echo "تم إرسال الطلب بنجاح!";
 } else {
-  echo "الطلب غير صالح.";
+    echo "طريقة الإرسال غير صحيحة.";
 }
 ?>

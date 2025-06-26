@@ -1,122 +1,43 @@
 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f2f2f2;
+    font-family: Arial, sans-serif;
+    background: #f8f8f8 url('kaaba.jpg') no-repeat center top;
+    background-size: cover;
+    color: #333;
+    text-align: center;
+    padding: 20px;
 }
-
-.top-nav {
-  background-color: #b30000;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 .logo {
-  height: 40px;
+    width: 100px;
 }
-
-.menu-toggle {
-  font-size: 24px;
-  cursor: pointer;
+form {
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
 }
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: -250px;
-  width: 250px;
-  height: 100%;
-  background-color: white;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
-  padding: 20px;
-  transition: right 0.3s ease;
-  z-index: 999;
-}
-
-.sidebar.active {
-  right: 0;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  margin: 20px 0;
-}
-
-.sidebar ul li a {
-  text-decoration: none;
-  color: #b30000;
-  font-weight: bold;
-}
-
-.form-container {
-  max-width: 600px;
-  margin: 40px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-h1 {
-  color: #b30000;
-}
-
-.subtitle {
-  color: #555;
-  margin-bottom: 20px;
-}
-
-form label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
 input, select, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
-
-button {
-  margin-top: 15px;
-  background-color: #b30000;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+button, .call-button {
+    background-color: #c00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
 }
-
-.call-button {
-  display: inline-block;
-  margin-top: 15px;
-  background-color: green;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
 footer {
-  text-align: center;
-  padding: 20px;
-  background: white;
-  margin-top: 40px;
-  font-size: 14px;
+    margin-top: 30px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
 }
