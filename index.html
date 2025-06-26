@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>سماء تورز - التسجيل</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="menu-toggle">&#9776;</div>
+    <div class="logo-area">
+      <img src="logo.png" alt="شعار سماء تورز" class="logo"/>
+      <h2>سماء تورز</h2>
+    </div>
+  </nav>
+
+  <aside class="sidebar">
+    <ul>
+      <li><a href="#">من نحن</a></li>
+      <li><a href="#">العنوان</a></li>
+      <li><a href="#">تواصل معنا</a></li>
+    </ul>
+  </aside>
+
+  <main class="form-container">
+    <h1>التسجيل في الرحلات</h1>
+    <p class="subtitle">تحت إدارة الحاج محمد إبراهيم وهبه وأولاده</p>
+    <form action="submit.php" method="POST">
+      <label>الاسم الكامل</label>
+      <input type="text" name="name" required />
+      <label>رقم الهاتف</label>
+      <input type="tel" name="phone" required />
+      <label>العنوان</label>
+      <input type="text" name="address" required />
+      <label>نوع الرحلة</label>
+      <select name="trip_type">
+        <option value="عمرة">عمرة</option>
+        <option value="حج">حج</option>
+        <option value="سياحة">سياحة</option>
+      </select>
+      <label>هل تحتاج حجز تذاكر طيران؟</label>
+      <select name="flight">
+        <option value="نعم">نعم</option>
+        <option value="لا">لا</option>
+      </select>
+      <label>ملاحظات إضافية</label>
+      <textarea name="notes"></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+    <a href="tel:01026134265" class="call-button">اتصل الآن</a>
+  </main>
+
+  
+<section class="images-section">
+  <h2>صور من رحلاتنا</h2>
+  <div class="image-grid">
+    <img src="images/العمرة.jpg" alt="العمرة">
+    <img src="images/الحج.jpg" alt="الحج">
+    <img src="images/الطيران.jpg" alt="الطيران">
+  </div>
+</section>
+
+<footer>
+
+    <p>شبين الكوم، المنوفية، أمام كوبري مبارك، بجوار مسجد سيدي عبد المتعال ومجلس الدولة</p>
+    <p>تليفون: 01026134265 - 01016008351 - 01557193914</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const sidebar = document.querySelector(".sidebar");
+    toggle.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
